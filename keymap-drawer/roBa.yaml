@@ -348,9 +348,9 @@ layers:
   - LEFT COMMAND
   - {t: LANGUAGE 2, h: LEFT SHIFT}
   - {t: SPACE, h: NUM}
-  - {t: '&to_layer_0 LANGUAGE_1', h: ARROW}
+  - {t: LANGUAGE 1, h: ARROW}
   - BACKSPACE
-  - ENTER
+  - {t: ENTER, h: FUNCTION}
   - DELETE
 combos:
 - p: [11, 12]
