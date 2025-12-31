@@ -44,6 +44,50 @@ layers:
   - BACKSPACE
   - {t: ENTER, h: FUNCTION}
   - DEL
+  default_layer_mac:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - {t: default_layer_win, h: toggle}
+  - '-'
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - \
+  - '='
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - LEFT CONTROL
+  - LEFT ALT
+  - LEFT COMMAND
+  - {t: LANGUAGE 2, h: LEFT SHIFT}
+  - {t: SPACE, h: NUM}
+  - {t: LANGUAGE 1, h: ARROW}
+  - BACKSPACE
+  - {t: ENTER, h: FUNCTION}
+  - DELETE
   FUNCTION:
   - ESCAPE
   - F7
@@ -308,50 +352,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR ALL
-  default_layer_mac:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - A
-  - S
-  - D
-  - F
-  - G
-  - {t: default_layer_win, h: toggle}
-  - '-'
-  - H
-  - J
-  - K
-  - L
-  - ;
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - \
-  - '='
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - LEFT CONTROL
-  - LEFT ALT
-  - LEFT COMMAND
-  - {t: LANGUAGE 2, h: LEFT SHIFT}
-  - {t: SPACE, h: NUM}
-  - {t: LANGUAGE 1, h: ARROW}
-  - BACKSPACE
-  - {t: ENTER, h: FUNCTION}
-  - DELETE
 combos:
 - p: [11, 12]
   k: TAB
