@@ -22,7 +22,7 @@
         20 // l
         34 // Ctrl
     >;
-    require-prior-idle-ms = <500>;
+    require-prior-idle-ms = <1000>;
 };
 
 / {
