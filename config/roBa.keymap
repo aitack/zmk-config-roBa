@@ -79,7 +79,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer_win {
+        default_layer {
             bindings = <
 &kp Q         &kp W             &kp E         &kp R                      &kp T                                                        &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A         &kp S             &kp D         &kp F                      &kp G        &kp LS(LC(LG(NUMBER_4)))         &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
