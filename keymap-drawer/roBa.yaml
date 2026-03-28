@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: roBa}
 layers:
-  default_layer_win:
+  default:
   - Q
   - W
   - E
