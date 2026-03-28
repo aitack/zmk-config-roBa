@@ -1099,9 +1099,9 @@ path.combo {
 </text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="687" y="95" width="28" height="26" class="combo"/>
-<text x="701" y="108" class="combo tap">
-<tspan x="701" dy="-0.6em">&amp;mkp</tspan><tspan x="701" dy="1.2em">MB2</tspan>
+<rect rx="6" ry="6" x="631" y="78" width="28" height="26" class="combo"/>
+<text x="645" y="91" class="combo tap">
+<tspan x="645" dy="-0.6em">&amp;mkp</tspan><tspan x="645" dy="1.2em">MB2</tspan>
 </text>
 </g>
 </g>
