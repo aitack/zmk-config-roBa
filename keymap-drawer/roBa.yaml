@@ -195,9 +195,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - '&mkp MB2'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -313,9 +313,9 @@ combos:
   k: TAB
 - p: [12, 13]
   k: Sft+TAB
-- p: [11, 10]
-  k: '&to_layer_0 INT_MUHENKAN'
-- p: [20, 21]
-  k: '"'
-- p: [24, 25]
-  k: '='
+- p: [17, 18]
+  k: '&mkp MB1'
+- p: [18, 19]
+  k: '&mkp MB3'
+- p: [19, 20]
+  k: '&mkp MB2'
