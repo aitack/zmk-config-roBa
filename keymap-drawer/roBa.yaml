@@ -313,9 +313,12 @@ combos:
   k: TAB
 - p: [12, 13]
   k: Sft+TAB
-- p: [17, 18]
-  k: '&mkp MB1'
 - p: [18, 19]
+  k: '&mkp MB1'
+  l: [MOUSE]
+- p: [19, 31]
   k: '&mkp MB3'
-- p: [19, 20]
+  l: [MOUSE]
+- p: [20, 21]
   k: '&mkp MB2'
+  l: [MOUSE]
