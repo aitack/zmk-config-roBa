@@ -42,17 +42,20 @@
 
         l_click {
             bindings = <&mkp MB1>;
-            key-positions = <17 18>;
+            key-positions = <18 19>;
+            layers = <4>;
         };
 
         m_click {
             bindings = <&mkp MB3>;
-            key-positions = <18 19>;
+            key-positions = <19 31>;
+            layers = <4>;
         };
 
         r_click {
             bindings = <&mkp MB2>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
+            layers = <4>;
         };
     };
 
