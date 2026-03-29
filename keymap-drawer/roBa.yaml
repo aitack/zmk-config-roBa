@@ -315,10 +315,7 @@ combos:
   k: Sft+TAB
 - p: [18, 19]
   k: '&mkp MB1'
-  l: [MOUSE]
 - p: [19, 31]
   k: '&mkp MB3'
-  l: [MOUSE]
 - p: [20, 19]
   k: '&mkp MB2'
-  l: [MOUSE]
