@@ -52,7 +52,7 @@
 
         l_click {
             bindings = <&mkp MB1>;
-            key-positions = <17 18>;
+            key-positions = <18 19>;
         };
 
         m_click {
@@ -62,7 +62,7 @@
 
         r_click {
             bindings = <&mkp MB2>;
-            key-positions = <20 19>;
+            key-positions = <20 21>;
         };
     };
 
@@ -142,10 +142,10 @@
 
         APPLE {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                      &kp T                                                     &kp Y        &kp U  &lt L_SCROLL I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                      &kp G        &kp LG(LS(NUMBER_4))          &kp MINUS      &kp H        &kp J  &kp K            &kp L    &kp SQT
-&kp Z             &kp X         &kp C         &kp V                      &kp B        &lt_to_apple L_CONTROL BACKSLASH  &kp EQUAL      &kp N        &kp M  &kp COMMA        &kp DOT  &kp SLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT LANGUAGE_2  &lt L_NUM SPACE  &lt_to_apple L_ARROW_APPLE LANGUAGE_1  &kp BACKSPACE  &lt L_FUNCTION ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                      &kp T                                                                      &kp Y                 &kp U  &lt L_SCROLL I  &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                      &kp G            &kp LG(LS(NUMBER_4))                       &kp MINUS      &kp H                 &kp J  &kp K           &kp L    &kp SQT
+&kp Z             &kp X         &kp C         &kp V                      &kp B            &lt_to_apple L_CONTROL BACKSLASH           &kp EQUAL      &kp N                 &kp M  &kp COMMA       &kp DOT  &kp SLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT LANGUAGE_2  &lt L_NUM SPACE  &lt_to_apple L_ARROW_APPLE LANGUAGE_1      &kp BACKSPACE  &lt L_FUNCTION ENTER                                  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -153,10 +153,10 @@
 
         WINDOWS {
             bindings = <
-&trans        &trans            &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans
-&trans        &trans            &trans  &trans  &trans  &kp LG(LS(S))              &trans           &trans  &trans  &trans  &trans  &trans
-&trans        &trans            &trans  &trans  &trans  &lt_to_windows L_CONTROL BACKSLASH  &trans           &trans  &trans  &trans  &trans  &trans
-&kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans  &lt_to_windows L_ARROW_WINDOWS LANGUAGE_1  &trans           &trans                 &trans
+&trans        &trans        &trans            &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans            &trans  &trans  &kp LG(LS(S))                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans            &trans  &trans  &lt_to_windows L_CONTROL BACKSLASH             &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans  &lt_to_windows L_ARROW_WINDOWS LANGUAGE_1      &trans  &trans                          &trans
             >;
         };
 
@@ -191,10 +191,10 @@
 
         ARROW_WINDOWS {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)       &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LS(HOME)     &trans          &kp LS(END)       &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans           &trans          &trans            &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &trans                       &trans  &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LS(HOME)     &trans          &kp LS(END)      &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans           &trans          &trans           &trans   &trans      &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -223,7 +223,7 @@
 &trans  &trans  &trans  &trans  &trans                           &bt_0_apple  &bt_1_windows  &bt_2_apple  &bt_3_apple  &bt_4_apple
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans       &trans         &trans       &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans       &trans         &trans       &trans       &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                             &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                &bt BT_CLR_ALL
             >;
         };
     };
