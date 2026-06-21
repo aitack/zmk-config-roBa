@@ -20,14 +20,14 @@ profile also selects its OS mode:
 The selected OS mode is not saved separately. When the keyboard reconnects to
 BT1 after a power cycle, select BT1 again to restore Windows mode.
 
-The three left modifier keys keep the primary shortcut modifier in the same
-physical position:
+The three left modifier keys sit directly below Z, X, and C. The primary
+shortcut modifier is below C on both OS modes:
 
 | Position | Apple mode | Windows mode |
 | --- | --- | --- |
-| Left | Control | Win |
-| Center | Command | Ctrl |
-| Right | Option | Alt |
+| Below Z | Control | Win |
+| Below X | Option | Alt |
+| Below C | Command | Ctrl |
 
 OS-specific shortcuts are normalized as follows:
 
@@ -44,7 +44,8 @@ OS-specific shortcuts are normalized as follows:
 After flashing both halves, verify the following on the actual devices:
 
 - [ ] BT0 and BT2-4 select Apple mode; BT1 selects Windows mode.
-- [ ] The center modifier produces Command on Apple and Ctrl on Windows.
+- [ ] The modifier below C produces Command on Apple and Ctrl on Windows.
+- [ ] MB1 (`H+J`) and MB2 (`K+L`) can be pressed at the same time.
 - [ ] Screenshot produces the expected OS screenshot UI or capture.
 - [ ] Arrow-layer selection extends to the start and end of a line.
 - [ ] Function, Num, Apple/Windows Arrow, Mouse, and Scroll layers work.

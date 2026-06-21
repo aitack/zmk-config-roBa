@@ -52,7 +52,7 @@
 
         l_click {
             bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+            key-positions = <17 18>;
         };
 
         m_click {
@@ -145,7 +145,7 @@
 &kp Q             &kp W         &kp E         &kp R                      &kp T                                                     &kp Y        &kp U  &lt L_SCROLL I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                      &kp G        &kp LG(LS(NUMBER_4))          &kp MINUS      &kp H        &kp J  &kp K            &kp L    &kp SQT
 &kp Z             &kp X         &kp C         &kp V                      &kp B        &lt_to_apple L_CONTROL BACKSLASH  &kp EQUAL      &kp N        &kp M  &kp COMMA        &kp DOT  &kp SLASH
-&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &lt L_NUM SPACE  &lt_to_apple L_ARROW_APPLE LANGUAGE_1  &kp BACKSPACE  &lt L_FUNCTION ENTER                             &kp DEL
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT LANGUAGE_2  &lt L_NUM SPACE  &lt_to_apple L_ARROW_APPLE LANGUAGE_1  &kp BACKSPACE  &lt L_FUNCTION ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -156,7 +156,7 @@
 &trans        &trans            &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans
 &trans        &trans            &trans  &trans  &trans  &kp LG(LS(S))              &trans           &trans  &trans  &trans  &trans  &trans
 &trans        &trans            &trans  &trans  &trans  &lt_to_windows L_CONTROL BACKSLASH  &trans           &trans  &trans  &trans  &trans  &trans
-&kp LEFT_GUI  &kp LEFT_CONTROL  &trans  &trans  &trans  &lt_to_windows L_ARROW_WINDOWS LANGUAGE_1  &trans           &trans                 &trans
+&kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans  &lt_to_windows L_ARROW_WINDOWS LANGUAGE_1  &trans           &trans                 &trans
             >;
         };
 
