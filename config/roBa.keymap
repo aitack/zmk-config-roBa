@@ -4,14 +4,24 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define L_APPLE 0
+#define L_WINDOWS 1
+#define L_FUNCTION 2
+#define L_NUM 3
+#define L_ARROW_APPLE 4
+#define L_ARROW_WINDOWS 5
+#define L_MOUSE 6
+#define L_SCROLL 7
+#define L_CONTROL 8
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
 
 &trackball {
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+    automouse-layer = <L_MOUSE>;
+    scroll-layers = <L_SCROLL>;
 
     // arrows {
     //     layers = <3>;
@@ -42,7 +52,7 @@
 
         l_click {
             bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+            key-positions = <17 18>;
         };
 
         m_click {
@@ -57,19 +67,70 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
+        to_apple: to_apple {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+            bindings = <&to L_APPLE &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_APPLE";
+        };
+
+        to_windows: to_windows {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to L_WINDOWS &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_WINDOWS";
+        };
+
+        bt_0_apple: bt_0_apple {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to L_APPLE>;
+            label = "BT_0_APPLE";
+        };
+
+        bt_1_windows: bt_1_windows {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to L_WINDOWS>;
+            label = "BT_1_WINDOWS";
+        };
+
+        bt_2_apple: bt_2_apple {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to L_APPLE>;
+            label = "BT_2_APPLE";
+        };
+
+        bt_3_apple: bt_3_apple {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &to L_APPLE>;
+            label = "BT_3_APPLE";
+        };
+
+        bt_4_apple: bt_4_apple {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to L_APPLE>;
+            label = "BT_4_APPLE";
         };
     };
 
     behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
+        lt_to_apple: lt_to_apple {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            label = "LAYER_TAP_TO_APPLE";
+            bindings = <&mo>, <&to_apple>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt_to_windows: lt_to_windows {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_WINDOWS";
+            bindings = <&mo>, <&to_windows>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -79,15 +140,24 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        APPLE {
             bindings = <
-&kp Q         &kp W             &kp E         &kp R                      &kp T                                                        &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A         &kp S             &kp D         &kp F                      &kp G        &kp LS(LC(LG(NUMBER_4)))         &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z         &kp X             &kp C         &kp V                      &kp B        &lt_to_layer_0 6 BACKSLASH       &kp EQUAL      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_WIN  &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &lt 2 SPACE  &lt_to_layer_0 3 LANGUAGE_1      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                      &kp T                                                     &kp Y        &kp U  &lt L_SCROLL I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                      &kp G        &kp LG(LS(NUMBER_4))          &kp MINUS      &kp H        &kp J  &kp K            &kp L    &kp SQT
+&kp Z             &kp X         &kp C         &kp V                      &kp B        &lt_to_apple L_CONTROL BACKSLASH  &kp EQUAL      &kp N        &kp M  &kp COMMA        &kp DOT  &kp SLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT LANGUAGE_2  &lt L_NUM SPACE  &lt_to_apple L_ARROW_APPLE LANGUAGE_1  &kp BACKSPACE  &lt L_FUNCTION ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+        };
+
+        WINDOWS {
+            bindings = <
+&trans        &trans            &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans
+&trans        &trans            &trans  &trans  &trans  &kp LG(LS(S))              &trans           &trans  &trans  &trans  &trans  &trans
+&trans        &trans            &trans  &trans  &trans  &lt_to_windows L_CONTROL BACKSLASH  &trans           &trans  &trans  &trans  &trans  &trans
+&kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans  &lt_to_windows L_ARROW_WINDOWS LANGUAGE_1  &trans           &trans                 &trans
+            >;
         };
 
         FUNCTION {
@@ -108,12 +178,23 @@
             >;
         };
 
-        ARROW {
+        ARROW_APPLE {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+        };
+
+        ARROW_WINDOWS {
+            bindings = <
+&kp ESCAPE      &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)       &trans                       &trans  &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LS(HOME)     &trans          &kp LS(END)       &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans           &trans          &trans            &trans   &trans      &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -137,12 +218,12 @@
             >;
         };
 
-        layer_6 {
+        CONTROL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans                           &bt_0_apple  &bt_1_windows  &bt_2_apple  &bt_3_apple  &bt_4_apple
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans       &trans         &trans       &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans       &trans         &trans       &trans       &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                             &bt BT_CLR_ALL
             >;
         };
     };
