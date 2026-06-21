@@ -36,8 +36,8 @@ layers:
   - .
   - /
   - LEFT CONTROL
-  - LEFT GUI
   - LEFT ALT
+  - LEFT GUI
   - {t: LANGUAGE 2, h: LEFT SHIFT}
   - {t: SPACE, h: NUM}
   - {t: '&to_apple LANGUAGE_1', h: ARROW_APPLE}
@@ -80,8 +80,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT GUI
+  - LEFT ALT
   - LEFT CONTROL
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '&to_windows LANGUAGE_1', h: ARROW_WINDOWS}
@@ -401,7 +401,7 @@ combos:
   k: TAB
 - p: [12, 13]
   k: Sft+TAB
-- p: [18, 19]
+- p: [17, 18]
   k: '&mkp MB1'
 - p: [19, 31]
   k: '&mkp MB3'
