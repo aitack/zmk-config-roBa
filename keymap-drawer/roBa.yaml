@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: roBa}
 layers:
-  default:
+  APPLE:
   - Q
   - W
   - E
@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - Sft+Ctl+Gui+4
+  - Gui+Sft+4
   - '-'
   - H
   - J
@@ -28,22 +28,66 @@ layers:
   - C
   - V
   - B
-  - {t: '&to_layer_0 BACKSLASH', h: '6'}
+  - {t: '&to_apple BACKSLASH', h: CONTROL}
   - '='
   - N
   - M
   - ','
   - .
   - /
-  - LEFT WIN
   - LEFT CONTROL
+  - LEFT GUI
   - LEFT ALT
   - {t: LANGUAGE 2, h: LEFT SHIFT}
   - {t: SPACE, h: NUM}
-  - {t: '&to_layer_0 LANGUAGE_1', h: ARROW}
+  - {t: '&to_apple LANGUAGE_1', h: ARROW_APPLE}
   - BACKSPACE
   - {t: ENTER, h: FUNCTION}
   - DEL
+  WINDOWS:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+Sft+S
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&to_windows BACKSLASH', h: CONTROL}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT GUI
+  - LEFT CONTROL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&to_windows LANGUAGE_1', h: ARROW_WINDOWS}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   FUNCTION:
   - ESCAPE
   - F7
@@ -132,7 +176,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '|'
-  ARROW:
+  ARROW_APPLE:
   - ESCAPE
   - Ctl+Sft+TAB
   - UP ARROW
@@ -159,6 +203,50 @@ layers:
   - Gui+Sft+LEFT ARROW
   - {t: ▽, type: trans}
   - Gui+Sft+RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  ARROW_WINDOWS:
+  - ESCAPE
+  - Ctl+Sft+TAB
+  - UP ARROW
+  - Ctl+TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT SHIFT
+  - Sft+HOME
+  - {t: ▽, type: trans}
+  - Sft+END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -264,17 +352,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '6':
+  CONTROL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - '&bt_0_apple'
+  - '&bt_1_windows'
+  - '&bt_2_apple'
+  - '&bt_3_apple'
+  - '&bt_4_apple'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
